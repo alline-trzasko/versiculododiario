@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Versículos Aleatórios</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f4f8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .card {
+            background: linear-gradient(135deg, #6dd5fa, #2980b9);
+            color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            max-width: 500px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .card p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .card-footer {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        footer {
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>Versículo do Dia</h1>
+        <p id="verse">Carregando versículo...</p>
+        <div class="card-footer">Que este versículo ilumine o seu dia!</div>
+    </div>
+
+    <footer>© 2024 - Sua Igreja</footer>
+
+    <script>
+        // Lista de 500 versículos
+        const verses = [
+            "Gênesis 1:1 - No princípio criou Deus os céus e a terra.",
+            "Êxodo 14:14 - O Senhor pelejará por vós, e vós vos calareis.",
+            "Levítico 19:18 - Amarás o teu próximo como a ti mesmo.",
+            "Números 6:24-26 - O Senhor te abençoe e te guarde; o Senhor faça resplandecer o seu rosto sobre ti...",
+            "Deuteronômio 31:6 - Esforçai-vos, e animai-vos; não temais, nem vos espanteis...",
+            "Josué 1:9 - Não to mandei eu? Esforça-te, e tem bom ânimo; não temas, nem te espantes...",
+            "Salmos 23:1 - O Senhor é o meu pastor, nada me faltará.",
+            "Salmos 27:1 - O Senhor é a minha luz e a minha salvação; a quem temerei?",
+            "Salmos 46:10 - Aquietai-vos, e sabei que eu sou Deus.",
+            "Provérbios 3:5-6 - Confia no Senhor de todo o teu coração, e não te estribes no teu próprio entendimento.",
+            "Provérbios 16:9 - O coração do homem planeja o seu caminho, mas o Senhor lhe dirige os passos.",
+            "Isaías 40:31 - Mas os que esperam no Senhor renovarão as forças; subirão com asas como águias...",
+            "Isaías 41:10 - Não temas, porque eu sou contigo; não te assombres, porque eu sou o teu Deus...",
+            "Jeremias 29:11 - Porque eu sei os pensamentos que penso de vós, diz o Senhor...",
+            "Mateus 5:16 - Assim resplandeça a vossa luz diante dos homens...",
+            "Mateus 11:28 - Vinde a mim, todos os que estais cansados e oprimidos...",
+            "João 3:16 - Porque Deus amou o mundo de tal maneira que deu o seu Filho unigênito...",
+            "João 8:32 - E conhecereis a verdade, e a verdade vos libertará.",
+            "João 14:6 - Eu sou o caminho, e a verdade e a vida; ninguém vem ao Pai, senão por mim.",
+            "Romanos 8:28 - E sabemos que todas as coisas contribuem juntamente para o bem daqueles que amam a Deus...",
+            "Romanos 12:2 - E não sede conformados com este mundo, mas sede transformados pela renovação do vosso entendimento...",
+            "1 Coríntios 13:4-7 - O amor é paciente, o amor é bondoso. Não inveja, não se vangloria, não se orgulha...",
+            "Filipenses 4:13 - Posso todas as coisas em Cristo que me fortalece.",
+            "Filipenses 4:19 - O meu Deus, segundo as suas riquezas, suprirá todas as vossas necessidades em glória por Cristo Jesus.",
+            "2 Timóteo 1:7 - Porque Deus não nos deu o espírito de temor, mas de fortaleza, e de amor, e de moderação.",
+            "Hebreus 11:1 - Ora, a fé é o firme fundamento das coisas que se esperam, e a prova das coisas que não se veem.",
+            "1 Pedro 5:7 - Lançando sobre ele toda a vossa ansiedade, porque ele tem cuidado de vós.",
+            "Apocalipse 21:4 - E Deus limpará de seus olhos toda lágrima; e não haverá mais morte, nem pranto, nem clamor, nem dor..."
+            // Continue adicionando até completar 500 versículos...
+        ];
+
+        // Escolher versículo aleatório
+        function getRandomVerse() {
+            const randomIndex = Math.floor(Math.random() * verses.length);
+            return verses[randomIndex];
+        }
+
+        // Exibir versículo no card
+        document.getElementById('verse').textContent = getRandomVerse();
+    </script>
+</body>
+</html>
